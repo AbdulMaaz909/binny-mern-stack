@@ -63,7 +63,7 @@ export default function AdminMovies() {
   const logoutUser = () => {
     localStorage.clear();
     toast.success("Logged out successfully");
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   // Fetch movies

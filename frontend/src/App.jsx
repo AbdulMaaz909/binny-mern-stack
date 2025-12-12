@@ -13,12 +13,6 @@ const Home = () => (
   </div>
 );
 
-// const AdminDashboard = () => (
-//   <div>
-//     <h2>Admin Dashboard</h2>
-//     <p>Admin-only area.</p>
-//   </div>
-// );
 
 function App() {
   return (

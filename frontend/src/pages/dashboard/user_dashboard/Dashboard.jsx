@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   const logoutUser = () => {
     auth.logout();
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   const fetchMovies = async () => {
