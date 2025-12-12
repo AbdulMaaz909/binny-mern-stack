@@ -9,6 +9,13 @@ A full-featured movie management system built using the MERN (MongoDB, Express, 
 | **Frontend (Live Demo)**   | [https://binny-mern-stack.vercel.app](https://binny-mern-stack.vercel.app/)           |
 | **Backend (API Base URL)** | [https://binny-mern-stack-kb9j.vercel.app](https://binny-mern-stack-kb9j.vercel.app/) |
 
+## 1.username and password for user
+username:abdul@gmail.com
+password:123123
+
+## 2.username and password for admin
+username:khan@gmail.com
+password:123123
 ---
 
 ## ✨ Key Features
