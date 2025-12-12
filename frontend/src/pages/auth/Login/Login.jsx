@@ -136,6 +136,18 @@ const Login = () => {
               >
                 Login
               </Button>
+            
+             <Box textAlign="center">
+  <Typography variant="body2">
+    Don't have an account?{" "}
+    <span
+      onClick={() => navigate("/register")}
+      className="register-link"
+    >
+      Register here
+    </span>
+  </Typography>
+</Box>
             </Box>
           </Box>
         </Paper>

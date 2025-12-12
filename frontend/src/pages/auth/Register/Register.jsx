@@ -164,6 +164,23 @@ const Register = () => {
               >
                 Register
               </Button>
+            
+             <Box textAlign="center">
+              <Typography variant="body2">
+                Already have an account?{" "}
+                <span
+                  onClick={() => navigate("/login")}
+                  style={{
+                    color: "#1976d2",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                    textDecoration: "underline",
+                  }}
+                >
+                  Login
+                </span>
+              </Typography>
+            </Box>
             </Box>
           </Box>
         </Paper>

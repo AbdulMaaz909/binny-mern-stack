@@ -19,3 +19,10 @@
 .Login .MuiBox-root {
   padding: 40px 30px;
 }
+
+.register-link {
+  color: #1976d2;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}

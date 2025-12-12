@@ -19,6 +19,9 @@ const auth = {
       return null
     }
   },
+  logout() {
+    this.clear();   // 🚀 actual logout function
+  },
   setUser(user) {
     try {
       localStorage.setItem('user', JSON.stringify(user))

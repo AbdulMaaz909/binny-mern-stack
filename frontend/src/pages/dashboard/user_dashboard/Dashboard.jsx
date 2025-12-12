@@ -17,9 +17,12 @@ import { getMovie, sortedMovie, searchMovie } from "../../../service";
 import auth from "../../../utils/auth";
 import LogoutIcon from "@mui/icons-material/Logout";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -39,20 +42,23 @@ const Dashboard = () => {
   const handleOpenMenu = (e) => setAnchorEl(e.currentTarget);
   const handleCloseMenu = () => setAnchorEl(null);
 
+  // 🚀 Proper LOGOUT Function
   const logoutUser = () => {
-    auth.logout();
-    window.location.href = "/";
+    handleCloseMenu(); // close profile menu
+    auth.logout(); // delete token from storage
+    toast.success("Logged out successfully!");
+    navigate("/login"); // smooth redirect
   };
 
   const fetchMovies = async () => {
     try {
       let res;
 
-      if (query.trim() !== "") {
+      if (query.trim()) {
         res = await searchMovie(query);
         setMovies(res.data.movies || []);
         setTotalPages(1);
-      } else if (sortBy !== "") {
+      } else if (sortBy) {
         res = await sortedMovie(sortBy, order);
         setMovies(res.data.movies || []);
         setTotalPages(res.data.totalPages || 1);
@@ -71,10 +77,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, [page,
-     sortBy, 
-     order, 
-     query]);
+  }, [page, sortBy, order, query]);
 
   return (
     <Box className="dashboard-container">
@@ -91,7 +94,7 @@ const Dashboard = () => {
           <KeyboardArrowDownIcon className="dropdown-icon" />
         </Box>
 
-        {/* PROFILE DROPDOWN MENU */}
+        {/* PROFILE DROPDOWN */}
         <Menu anchorEl={anchorEl} open={open} onClose={handleCloseMenu}>
           <Box sx={{ px: 2, py: 1 }}>
             <Typography>{name}</Typography>
