@@ -1,0 +1,20 @@
+.Register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.Register .MuiPaper-root {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.Register .MuiBox-root {
+  padding: 40px 30px;
+}
