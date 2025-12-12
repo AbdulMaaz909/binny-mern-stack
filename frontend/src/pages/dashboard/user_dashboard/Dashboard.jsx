@@ -35,6 +35,7 @@ const Dashboard = () => {
   const user = auth.getUser() || {};
   const name = user.name || "User";
   const email = user.email || "";
+  const role = user.role || "";
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -88,7 +89,7 @@ const Dashboard = () => {
             {name?.charAt(0)?.toUpperCase()}
           </Avatar>
           <Box>
-            <Typography className="profile-name">{name}</Typography>
+            <Typography className="profile-name">{name}-{role}</Typography>
             <Typography className="profile-email">{email}</Typography>
           </Box>
           <KeyboardArrowDownIcon className="dropdown-icon" />

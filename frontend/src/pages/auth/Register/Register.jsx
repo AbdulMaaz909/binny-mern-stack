@@ -31,6 +31,7 @@ const validationSchema = yup.object({
     .string()
     .oneOf([yup.ref("password"), null], "Passwords must match")
     .required("Confirm Password is required"),
+    role: yup.string().required("Role is require"),
 });
 
 const Register = () => {
@@ -55,6 +56,7 @@ const Register = () => {
         name: data.name,
         email: data.email,
         password: data.password,
+        role: data.role,
       };
 
       const res = await checkUserRegister(body);
@@ -104,6 +106,16 @@ const Register = () => {
                   {...register("email")}
                   error={!!errors.email}
                   helperText={errors.email?.message}
+                />
+
+                <TextField
+                  fullWidth
+                  label="Role"
+                  margin="dense"
+                  placeholder="user/admin"
+                  {...register("role")}
+                  error={!!errors.role}
+                  helperText={errors.role?.message}
                 />
 
                 {/* Password */}

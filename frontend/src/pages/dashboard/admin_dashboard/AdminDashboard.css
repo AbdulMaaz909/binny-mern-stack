@@ -100,3 +100,76 @@
   justify-content: space-between;
   margin-top: 15px;
 }
+
+/* ======================= */
+/* RESPONSIVE BREAKPOINTS  */
+/* ======================= */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .admin-wrapper {
+    padding: 20px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .profile-email {
+    display: none;
+  }
+
+  .admin-container {
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .submit-btn {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .admin-wrapper {
+    padding: 15px;
+  }
+
+  .admin-header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-section {
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  .dropdown-icon {
+    font-size: 18px;
+  }
+
+  .admin-container {
+    padding: 15px;
+  }
+
+  .form-box {
+    padding: 15px;
+  }
+
+  .movie-card {
+    padding: 12px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

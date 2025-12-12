@@ -109,6 +109,7 @@ export default function AdminMovies() {
 
   // Edit
   const handleEdit = (movie) => {
+    window.scrollTo({top:0,behavior: "smooth"})
     setEditId(movie._id);
     setFormData({
       title: movie.title,
