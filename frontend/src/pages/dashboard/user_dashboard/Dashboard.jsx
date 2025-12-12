@@ -9,7 +9,6 @@ import {
   TextField,
   MenuItem,
   Avatar,
-  IconButton,
   Menu,
   Divider,
 } from "@mui/material";
@@ -72,7 +71,10 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, [page, sortBy, order, query]);
+  }, [page,
+     sortBy, 
+     order, 
+     query]);
 
   return (
     <Box className="dashboard-container">
